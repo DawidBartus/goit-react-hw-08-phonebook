@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 const style = {
   backgroundColor: '#1C1C1C',
@@ -23,13 +23,13 @@ const Layout = () => {
     <>
       <div style={style}>
         <header style={headerStyle}>
+          <Link to="/">Home</Link>
           <p>Cześć</p>
           <span>
-            <button>Log in</button>
-            <button>Register</button>
+            <Link to="/Login">Log in</Link>
+            <Link to="/Register">Register</Link>
           </span>
         </header>
-
         <Suspense>
           <Outlet />
         </Suspense>
