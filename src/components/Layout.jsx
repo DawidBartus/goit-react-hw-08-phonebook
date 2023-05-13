@@ -1,5 +1,8 @@
 import { Suspense } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import { useAuth } from './hooks/useAuth';
+import { useDispatch } from 'react-redux';
+import { logOut } from './redux/auth/operations';
 
 const style = {
   backgroundColor: '#1C1C1C',
@@ -19,15 +22,26 @@ const headerStyle = {
 };
 
 const Layout = () => {
+  const dispatch = useDispatch();
+  const { isLoggedIn, user } = useAuth();
+
   return (
     <>
       <div style={style}>
         <header style={headerStyle}>
-          <Link to="/">Home</Link>
-          <p>Cześć</p>
+          {isLoggedIn && <Link to="/contacts">Contacts</Link>}
           <span>
-            <Link to="/Login">Log in</Link>
-            <Link to="/Register">Register</Link>
+            <h3>Cześć</h3>{' '}
+            {isLoggedIn ? user.name : 'Zaloguj się lub zarejestruj ->'}
+          </span>
+          <span>
+            {!isLoggedIn && <Link to="/Login">Log in</Link>}
+            {!isLoggedIn && <Link to="/Register">Register</Link>}
+            {isLoggedIn && (
+              <button type="button" onClick={() => dispatch(logOut())}>
+                Log out
+              </button>
+            )}
           </span>
         </header>
         <Suspense>
