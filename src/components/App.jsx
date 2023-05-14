@@ -23,14 +23,12 @@ const App = () => {
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* <Route index element={<Home />} /> */}
         <Route
           path="/login"
           element={
             <RestrictedRoute redirectTo="/contacts" component={<Login />} />
           }
         />
-        {/* <Route path="/register" element={<Register />} /> */}
         <Route
           path="/register"
           element={

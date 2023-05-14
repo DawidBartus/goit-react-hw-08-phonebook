@@ -1,5 +1,6 @@
 import { logIn } from 'components/redux/auth/operations';
 import { useDispatch } from 'react-redux';
+import style from './allPageStyle.module.css';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -17,14 +18,18 @@ const Login = () => {
     form.reset();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="">
-        <input type="email" name="email" />
+    <form onSubmit={handleSubmit} className={style.form}>
+      <label htmlFor="" className={style.label}>
+        Email
       </label>
-      <label htmlFor="">
-        <input type="password" name="password" />
+      <input className={style.input} type="email" name="email" />
+      <label className={style.label} htmlFor="">
+        Password
       </label>
-      <button type="submit">Log In</button>
+      <input className={style.input} type="password" name="password" />
+      <button className={style.submit_bttn} type="submit">
+        Log In
+      </button>
     </form>
   );
 };

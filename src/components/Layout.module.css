@@ -1,0 +1,70 @@
+.container {
+  background-color: #1c1c1c;
+  padding: 10px 10px;
+  margin: 10px auto;
+  width: 412px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.headerStyle {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.mainPageMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageLinkHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageLink {
+  background-color: #646363;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.pageLink:hover,
+.pageLink:focus,
+.logOutBttn:hover,
+.logOutBttn:focus {
+  color: white;
+  outline: #7cff92 1px solid;
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(124, 255, 146, 1);
+  -moz-box-shadow: 0px 0px 24px 1px rgba(124, 255, 146, 1);
+  box-shadow: 0px 0px 24px 1px rgba(124, 255, 146, 1);
+}
+
+.headerParam {
+  margin-bottom: 15px;
+}
+
+.logOutBttn {
+  background-color: #646363;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+.menuNavigate {
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+}
+.marginLeft {
+  margin-left: 30px;
+}

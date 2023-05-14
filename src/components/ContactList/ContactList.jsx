@@ -21,13 +21,13 @@ const ContactList = props => {
   };
   return (
     <>
-      {contacts > 0 ? (
+      {contacts.length > 0 ? (
         <h2 style={styleH2}>Contacts</h2>
       ) : (
         <h2 style={styleH2}>Add someone</h2>
       )}
 
-      {contacts > 0 && <Filter onChange={setFilters} />}
+      {contacts.length > 0 && <Filter onChange={setFilters} />}
       <ul className={style.list}>
         {contacts
           .filter(contact => {

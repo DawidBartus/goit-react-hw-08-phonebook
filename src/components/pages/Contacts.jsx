@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-// import { setFilter } from 'components/redux/filterSlice';
 import { deleteNumber, fetchContacts } from 'components/redux/operations';
 import ContactForm from 'components/ContactForm/ContactForm';
-// import Filter from 'components/Filter/Filter';
 import ContactList from 'components/ContactList/ContactList';
 import { selectError, selectIsLoading } from 'components/redux/selectors';
 
@@ -18,11 +15,6 @@ const Contacts = () => {
     e.preventDefault();
     dispatch(deleteNumber(e.target.id));
   };
-
-  // const setFilters = e => {
-  //   const newfilter = e.target.value;
-  //   dispatch(setFilter(newfilter));
-  // };
 
   useEffect(() => {
     dispatch(fetchContacts());
