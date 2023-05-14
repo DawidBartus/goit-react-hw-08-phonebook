@@ -11,9 +11,8 @@ const Layout = () => {
   const { isLoggedIn, user } = useAuth();
 
   const location = useLocation();
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
+
+  useEffect(() => {}, [location]);
 
   return (
     <>
@@ -49,7 +48,7 @@ const Layout = () => {
           {location.pathname === '/register' && (
             <span className={style.marginLeft}>
               <h3>Hi</h3>
-              <p className={style.headerParam}>If you have an account</p>
+              <p className={style.headerParam}>If you have an account:</p>
               <Link className={style.pageLink} to="/login">
                 Log in here
               </Link>
