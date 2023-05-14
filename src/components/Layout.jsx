@@ -23,7 +23,7 @@ const Layout = () => {
             <div className={style.mainPageMenu}>
               <h3>Hi, how are you?</h3>
               <span className={style.pageLinkHolder}>
-                <p>If you are new here, fell free to create an accont:</p>
+                <p>If you are new here, feel free to create an accont:</p>
                 <Link className={style.pageLink} to="/register">
                   Register here
                 </Link>

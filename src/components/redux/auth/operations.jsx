@@ -21,6 +21,7 @@ export const register = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
+      alert('This email or username is already taken.');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
